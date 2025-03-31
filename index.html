@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Image-Based Relocalization and Alignment for Long-Term Monitoring of Dynamic Underwater Environments">
+  <meta name="keywords" content="Underloc, Visual Localization, Underwater">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Underloc: Image-Based Relocalization and Alignment for Long-Term Monitoring of Dynamic Underwater Environments</title>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/assets/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width has-text-centered">
+          <h1 class="title is-1 publication-title">Underloc: Image-Based Relocalization and Alignment for Long-Term Monitoring of Dynamic Underwater Environments</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://bev-gorry.github.io/">Beverley Gorry</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.co.uk/citations?user=eq46ylAAAAAJ&hl=en">Tobias Fischer</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=TDSmCKgAAAAJ&hl=en">Michael Milford</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=SDtnGogAAAAJ&hl=es">Alejandro Fontan</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Queensland University of Technology</span>
+          </div>
+
+          <div class="column is-full-width has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2503.04096"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2503.04096"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/bev-gorry/underloc"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/assets/teaser_sequence.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="underloc">Underloc</span> is a method for image-based relocalization and alignment for long-term monitoring of dynamic underwater environments.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Abstract</h2>
+    <div class="content has-text-justified">
+      <p>
+        Effective monitoring of underwater ecosystems is crucial for tracking environmental changes, 
+        guiding conservation efforts, and ensuring long-term ecosystem health. However, automating 
+        underwater ecosystem management with robotic platforms remains challenging due to the complexities 
+        of underwater imagery, which pose significant difficulties for traditional visual localization 
+        methods. We propose an integrated pipeline that combines Visual Place Recognition (VPR), feature 
+        matching, and image segmentation on video-derived images. This method enables robust identification 
+        of revisited areas, estimation of rigid transformations, and downstream analysis of ecosystem changes. 
+        Furthermore, we introduce the SQUIDLE+ VPR Benchmark-the first large-scale underwater VPR benchmark 
+        designed to leverage an extensive collection of unstructured data from multiple robotic platforms, 
+        spanning time intervals from days to years. The dataset encompasses diverse trajectories, arbitrary 
+        overlap and diverse seafloor types captured under varying environmental conditions, including differences 
+        in depth, lighting, and turbidity.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Method</h2>
+    <div class="content has-text-justified">
+      <p>
+        To enable reliable multi-year change detection, <span class="underloc">Underloc</span> is an integrated 
+        pipeline that combines Visual Place Recognition (VPR), feature matching, and image segmentation on 
+        video-derived images. 
+        <!-- This method enables robust identification of revisited areas, estimation of rigid  -->
+        <!-- transformations, and downstream analysis of ecosystem changes. -->
+        Using the state-of-the-art VPR method, MegaLoc, our hierarchical method takes the top K matched 
+        images per query and reranks these candidates using more computationally expensive local feature 
+        matching. We use LightGlue to establish keypoint correspondences between Superpoint features and 
+        compute the homography matrix for warping and aligning query-database matches. Using the inlier 
+        count, we rerank matched images and filter out those with reprojection errors greater than 10 pixels.
+        To simulate a potential change detection method we automatically extract segmentation masks for each 
+        image using Segment-Anything 2 (SAM2). We then use the homography matrix to warp the masks into a 
+        common image space, enabling pixel-level comparison using intersection over union (IoU) as a similarity 
+        proxy.
+      </p>
+      <img src="./static/assets/underloc_pipeline.png"
+              alt="Underloc pipeline."/>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Results</h2>
+
+    <h3 class="title is-4">Precision Recall Curves</h3>
+    <div class="content has-text-justified">
+      <p>
+        Our hierarchical method, combining MegaLoc with SuperPoint, achieves performance comparable to brute-force 
+        SuperPoint (average precision of 16% for our hierarchical method vs 18% for brute-force).
+      </p>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-4">
+        <h4 class="title is-6" style="text-align: center;">Okinawa (2017-2018)</h4>
+        <img src="./static/assets/pr_okinawa.png"
+              alt="Precision Recall Curve for Okinawa (2017-2018)."/>
+      </div>
+      <div class="column is-4">
+        <h4 class="title is-6" style="text-align: center;">Tasman Fracture (2018/12/04-06)</h4>
+        <img src="./static/assets/pr_tasmanfracture.png"
+              alt="Precision Recall Curve for Tasman Fracture (2018/12/04-06)."/>
+      </div>
+      <div class="column is-4">
+        <h4 class="title is-6" style="text-align: center;">St Helens (2011-2013)</h4>
+        <img src="./static/assets/pr_sthelens.png"
+              alt="Precision Recall Curve for St Helens (2011-2013)."/>
+      </div>
+    </div>
+
+    <br/>
+
+    <h3 class="title is-4">Qualitative Results</h3>
+    <div class="content is-centered has-text-justified">
+      <p>
+        We evaluate the alignment between the two warped masks using an intersection over union (IoU) metric, where the intersection is defined as the number of shared pixels between the query and database masks, and the union represents the total number of pixels covered by both masks in the warped image.
+      </p>
+      <img src="./static/assets/underloc_qualitative.png"
+              alt="Qualitative Results." style="width: 85%; display: block; margin: auto;"/>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">SQUIDLE+ VPR Benchmark</h2>
+
+    <h3 class="title is-4">Built-In Datasets</h3>
+    <div class="content has-text-justified">
+      <p>
+        The first large-scale underwater VPR benchmark designed to leverage an extensive collection of 
+        unstructured data from multiple robotic platforms, spanning time intervals from days to years.
+      </p>
+    </div>
+    <div class="image-viewer-container">
+      <h4 id="imageTitle" class="title is-5" style="text-align: center;">
+        Okinawa: <span style="color: #3B75AF;">2017</span>-<span style="color: #EF8636;">2018</span>
+      </h4>
+      <img id="mainImage" src="./static/assets/traj_okinawa.png" alt="Main Image" style="width: 85%; height: auto; background: #ffffff; margin: 0 auto; display: block;">
+    </div>
+    <br>
+    <div class="content has-text-centered">
+      <div class="thumbnail-wrapper">
+        <div class="thumbnail-container">
+          <img src="./static/assets/traj_okinawa.png" class="thumbnail-selected" onclick="changeImage(this, 'Okinawa', '2017', '2018')">
+          <img src="./static/assets/traj_tasmanfracture.png" onclick="changeImage(this, 'Tasman Fracture', '2018/12/04', '2018/12/06')">
+          <img src="./static/assets/traj_sthelens.png" onclick="changeImage(this, 'St Helens', '2011', '2013')">
+          <img src="./static/assets/traj_eiffel.png" onclick="changeImage(this, 'Eiffel', '2018', '2020')">
+        </div>
+      </div>
+    </div>
+    <script>
+      function changeImage(element, title, year_ref, year_query) {
+        document.getElementById('mainImage').src = element.src;
+        document.getElementById('imageTitle').innerHTML = `${title}: <span style="color: #3B75AF;">${year_ref}</span>-<span style="color: #EF8636;">${year_query}</span>`;
+        document.querySelectorAll('.thumbnail-container img').forEach(img => {
+          img.classList.remove('thumbnail-selected');
+        });
+        element.classList.add('thumbnail-selected');
+      }
+    </script>
+
+    <br/>
+
+    <h3 class="title is-4">Leveraging Other SQUIDLE Sequences</h3>
+    <div class="content has-text-justified">
+      <p>
+        Using our publicly available code, any sequence from SQUIDLE can be exported and processed by 
+        the pipeline to create a dataset that encompasses diverse trajectories, arbitrary overlap and 
+        diverse seafloor types captured under varying environmental conditions.
+      </p>
+    </div>
+    <div class="content has-text-centered">
+      <video id="replay-video"
+              controls
+              autoplay
+              loop
+              muted
+              preload
+              playsinline
+              width="85%">
+        <source src="./static/assets/SQUIDLE_OKNW.mp4"
+                type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{gorry2025imagebasedrelocalizationalignmentlongterm,
+      title={Image-Based Relocalization and Alignment for Long-Term Monitoring of Dynamic Underwater Environments}, 
+      author={Beverley Gorry and Tobias Fischer and Michael Milford and Alejandro Fontan},
+      year={2025},
+      eprint={2503.04096},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2503.04096}, 
+    }
+</code></pre>
+  </div>
+</section>
+
+<section class="section" id="Acknowledgements">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Acknowledgements</h2>
+    <p>This research was partially supported by funding from ARC Laureate Fellowship FL210100156 to MM and ARC DECRA Fellowship DE240100149 to TF. 
+      The authors acknowledge continued support from the Queensland University of Technology (QUT) through the Centre for Robotics.
+      <br><br>
+      We would particularly like to acknlowedge the authors of <a href="https://github.com/gmberton/VPR-methods-evaluation">VPR-methods-evaluation</a>, 
+      <a href="https://arxiv.org/abs/2502.17237">MegaLoc</a>, <a href="https://github.com/cvg/LightGlue">LightGlue</a>, 
+      <a href="https://github.com/facebookresearch/sam2">SAM2</a>, and <a href="https://github.com/alejandrofontan/VSLAM-LAB">VSLAM-LAB</a>.
+      </p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="https://github.com/bev-gorry" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="content">
+      <p>
+        This webpage template is adapted from <a
+        href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> under a <a rel="license"
+                                            href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 International License</a>.
+      </p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
