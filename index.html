@@ -30,7 +30,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/assets/favicon.svg">
+  <link rel="icon" href="./static/assets/coral.svg">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -144,8 +144,6 @@
         To enable reliable multi-year change detection, <span class="underloc">Underloc</span> is an integrated 
         pipeline that combines Visual Place Recognition (VPR), feature matching, and image segmentation on 
         video-derived images. 
-        <!-- This method enables robust identification of revisited areas, estimation of rigid  -->
-        <!-- transformations, and downstream analysis of ecosystem changes. -->
         Using the state-of-the-art VPR method, MegaLoc, our hierarchical method takes the top K matched 
         images per query and reranks these candidates using more computationally expensive local feature 
         matching. We use LightGlue to establish keypoint correspondences between Superpoint features and 
@@ -157,7 +155,7 @@
         proxy.
       </p>
       <img src="./static/assets/underloc_pipeline.png"
-              alt="Underloc pipeline."/>
+              alt="Underloc pipeline." style="width: 85%; display: block; margin: auto;"/>
     </div>
   </div>
 </section>
@@ -177,17 +175,17 @@
       <div class="column is-4">
         <h4 class="title is-6" style="text-align: center;">Okinawa (2017-2018)</h4>
         <img src="./static/assets/pr_okinawa.png"
-              alt="Precision Recall Curve for Okinawa (2017-2018)."/>
+              alt="Precision Recall Curve for Okinawa (2017-2018)." style="width: 85%; display: block; margin: auto;"/>
       </div>
       <div class="column is-4">
         <h4 class="title is-6" style="text-align: center;">Tasman Fracture (2018/12/04-06)</h4>
         <img src="./static/assets/pr_tasmanfracture.png"
-              alt="Precision Recall Curve for Tasman Fracture (2018/12/04-06)."/>
+              alt="Precision Recall Curve for Tasman Fracture (2018/12/04-06)." style="width: 85%; display: block; margin: auto;"/>
       </div>
       <div class="column is-4">
         <h4 class="title is-6" style="text-align: center;">St Helens (2011-2013)</h4>
         <img src="./static/assets/pr_sthelens.png"
-              alt="Precision Recall Curve for St Helens (2011-2013)."/>
+              alt="Precision Recall Curve for St Helens (2011-2013)." style="width: 85%; display: block; margin: auto;"/>
       </div>
     </div>
 
@@ -219,7 +217,7 @@
       <h4 id="imageTitle" class="title is-5" style="text-align: center;">
         Okinawa: <span style="color: #3B75AF;">2017</span>-<span style="color: #EF8636;">2018</span>
       </h4>
-      <img id="mainImage" src="./static/assets/traj_okinawa.png" alt="Main Image" style="width: 85%; height: auto; background: #ffffff; margin: 0 auto; display: block;">
+      <img id="mainImage" src="./static/assets/traj_okinawa.png" alt="Main Image" style="width: 75%; height: auto; background: #ffffff; margin: 0 auto; display: block;">
     </div>
     <br>
     <div class="content has-text-centered">
@@ -228,7 +226,6 @@
           <img src="./static/assets/traj_okinawa.png" class="thumbnail-selected" onclick="changeImage(this, 'Okinawa', '2017', '2018')">
           <img src="./static/assets/traj_tasmanfracture.png" onclick="changeImage(this, 'Tasman Fracture', '2018/12/04', '2018/12/06')">
           <img src="./static/assets/traj_sthelens.png" onclick="changeImage(this, 'St Helens', '2011', '2013')">
-          <img src="./static/assets/traj_eiffel.png" onclick="changeImage(this, 'Eiffel', '2018', '2020')">
         </div>
       </div>
     </div>
@@ -245,7 +242,7 @@
 
     <br/>
 
-    <h3 class="title is-4">Leveraging Other SQUIDLE Sequences</h3>
+    <h3 class="title is-4">Leveraging Other SQUIDLE+ Sequences</h3>
     <div class="content has-text-justified">
       <p>
         Using our publicly available code, any sequence from SQUIDLE can be exported and processed by 
