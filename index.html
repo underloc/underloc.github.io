@@ -154,8 +154,8 @@
         common image space, enabling pixel-level comparison using intersection over union (IoU) as a similarity 
         proxy.
       </p>
-      <img src="./static/assets/underloc_pipeline.png"
-              alt="Underloc pipeline." style="width: 85%; display: block; margin: auto;"/>
+      <img id="pipeline" src="./static/assets/underloc_pipeline.png"
+              alt="Underloc pipeline." style="width: 90%; display: block; margin: auto;"/>
     </div>
   </div>
 </section>
@@ -196,7 +196,7 @@
       <p>
         We evaluate the alignment between the two warped masks using an intersection over union (IoU) metric, where the intersection is defined as the number of shared pixels between the query and database masks, and the union represents the total number of pixels covered by both masks in the warped image.
       </p>
-      <img src="./static/assets/underloc_qualitative.png"
+      <img id="qualitativeResults" src="./static/assets/underloc_qualitative.png"
               alt="Qualitative Results." style="width: 85%; display: block; margin: auto;"/>
     </div>
   </div>
@@ -217,28 +217,57 @@
       <h4 id="imageTitle" class="title is-5" style="text-align: center;">
         Okinawa: <span style="color: #3B75AF;">2017</span>-<span style="color: #EF8636;">2018</span>
       </h4>
-      <img id="mainImage" src="./static/assets/traj_okinawa.png" alt="Main Image" style="width: 75%; height: auto; background: #ffffff; margin: 0 auto; display: block;">
+    </div>
+    <div class="main-media-container">
+      <img id="mainImage" src="./static/assets/traj_okinawa.png" alt="Main Image">
+      <video id="mainVideo" 
+              controls
+              autoplay
+              loop
+              muted
+              preload
+              playsinline>
+          <source src="/home/beverley/Repos/SQUIDLE-VPR-BENCHMARK/OKINAWA/ssk18-01_tuna_sand_20181002_063627_ts_un6k_images/rgb.mp4" type="video/mp4">
+      </video>
     </div>
     <br>
     <div class="content has-text-centered">
       <div class="thumbnail-wrapper">
         <div class="thumbnail-container">
-          <img src="./static/assets/traj_okinawa.png" class="thumbnail-selected" onclick="changeImage(this, 'Okinawa', '2017', '2018')">
-          <img src="./static/assets/traj_tasmanfracture.png" onclick="changeImage(this, 'Tasman Fracture', '2018/12/04', '2018/12/06')">
-          <img src="./static/assets/traj_sthelens.png" onclick="changeImage(this, 'St Helens', '2011', '2013')">
+          <img src="./static/assets/traj_okinawa.png"
+               class="thumbnail-selected"
+               data-video-src="./static/assets/rgb_400imgs_okinawa2018.mp4"
+               onclick="changeMedia(this, 'Okinawa', '2017', '2018')">
+  
+          <img src="./static/assets/traj_tasmanfracture.png"
+               data-video-src="./static/assets/rgb_400imgs_tasmanfracture20181206.mp4"
+               onclick="changeMedia(this, 'Tasman Fracture', '2018/12/04', '2018/12/06')">
+  
+          <img src="./static/assets/traj_sthelens.png"
+               data-video-src="./static/assets/rgb_400imgs_sthelens2013.mp4"
+               onclick="changeMedia(this, 'St Helens', '2011', '2013')">
         </div>
       </div>
     </div>
+  
     <script>
-      function changeImage(element, title, year_ref, year_query) {
-        document.getElementById('mainImage').src = element.src;
-        document.getElementById('imageTitle').innerHTML = `${title}: <span style="color: #3B75AF;">${year_ref}</span>-<span style="color: #EF8636;">${year_query}</span>`;
+      function changeMedia(element, title, year_ref, year_query) {
+        document.getElementById('mainImage').src = element.src;  // update image source
+        const videoSrc = element.getAttribute('data-video-src'); // update video source
+        const videoElement = document.getElementById('mainVideo');
+        videoElement.src = videoSrc;
+        videoElement.load();
+        videoElement.play();
+        document.getElementById('imageTitle').innerHTML = `${title}: <span style="color: #3B75AF;">${year_ref}</span>-<span style="color: #EF8636;">${year_query}</span>`; // update title
+        
+        // update selected thumbnail
         document.querySelectorAll('.thumbnail-container img').forEach(img => {
           img.classList.remove('thumbnail-selected');
         });
         element.classList.add('thumbnail-selected');
       }
     </script>
+  
 
     <br/>
 
