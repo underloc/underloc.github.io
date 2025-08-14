@@ -4,13 +4,11 @@ This is the repository that contains source code for the Underloc website: https
 
 If you find Underloc useful for your work please cite:
 ```bibtex
-@misc{gorry2025imagebasedrelocalizationalignmentlongterm,
-      title={Image-Based Relocalization and Alignment for Long-Term Monitoring of Dynamic Underwater Environments}, 
-      author={Beverley Gorry and Tobias Fischer and Michael Milford and Alejandro Fontan},
-      year={2025},
-      eprint={2503.04096},
-      archivePrefix={arXiv},
-      primaryClass={cs.RO}
+@inproceedings{GorryIROS2025,
+    title={Image-Based Relocalization and Alignment for Long-Term Monitoring of Dynamic Underwater Environments},
+    author={Beverley Gorry and Tobias Fischer and Michael Milford and Alejandro Fontan},
+    booktitle={IEEE/RSJ Conference on Intelligent Robots and Systems},
+    year={2025},
 }
 ```
 
