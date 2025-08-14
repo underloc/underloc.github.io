@@ -10,8 +10,7 @@ If you find Underloc useful for your work please cite:
       year={2025},
       eprint={2503.04096},
       archivePrefix={arXiv},
-      primaryClass={cs.RO},
-      url={https://arxiv.org/abs/2503.04096}, 
+      primaryClass={cs.RO}
 }
 ```
 
